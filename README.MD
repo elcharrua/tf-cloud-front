@@ -1,4 +1,4 @@
-1. cloudfront.tf:
+**cloudfront.tf:**
 
 Este arquivo está definindo um módulo chamado "cloudfront" usando o código contido no diretório local "./modules/website-cloudfront". O módulo espera receber várias variáveis que são passadas como argumentos.
 
@@ -13,7 +13,8 @@ region: Região da conta AWS.
 default_cache_behavior_cached_methods: Métodos HTTP para os quais o CloudFront armazena em cache as respostas.
 tags: Tags aplicadas aos recursos do CloudFront.
 bucket_versioning: Ativar ou desativar a versionamento do bucket.
-2. vars.tfvars:
+
+**vars.tfvars:**
 
 Este arquivo define os valores das variáveis usadas no módulo "cloudfront". Aqui estão os valores fornecidos para algumas das variáveis:
 
@@ -26,11 +27,11 @@ profile: Nenhum perfil da conta AWS fornecido (valor vazio).
 region: Região da conta AWS fornecida como "us-east-1".
 default_cache_behavior_cached_methods: Métodos HTTP para armazenamento em cache fornecidos como ["GET", "HEAD"].
 tags: Tags fornecidas como um mapa com as chaves "system" e "application" e seus respectivos valores.
-3. providers.tf:
+**providers.tf:**
 
 Este arquivo define o provedor AWS usado no código Terraform. Ele especifica a região e o perfil da conta AWS, que são obtidos das variáveis correspondentes.
 
-4. variables.tf:
+**variables.tf:**
 
 Este arquivo define as variáveis que são usadas no módulo "cloudfront" e têm seus valores definidos em vars.tfvars. Aqui estão algumas das variáveis definidas:
 
